@@ -7,7 +7,7 @@ from datetime import datetime
 anos = list(range(2017, 2024))
 dfs = {}
 for ano in anos:
-    df = pd.read_csv(f"CLEAN_FIFA{ano}_official_data.csv", index_col=0)
+    df = pd.read_csv(f"data/CLEAN_FIFA{ano}_official_data.csv", index_col=0)
     df["Year"] = ano
     dfs[ano] = df
 
