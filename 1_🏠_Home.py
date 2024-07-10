@@ -1,7 +1,7 @@
 import streamlit as st
-import webbrowser
 import pandas as pd
 from datetime import datetime 
+import webbrowser
 
 # Carregar dados de todos os anos
 anos = list(range(2017, 2024))
@@ -22,9 +22,10 @@ if "data" not in st.session_state:
 st.markdown('# FIFA OFFICIAL DATASET! ⚽')
 st.sidebar.markdown("Desenvolvido por [Jorge Molina](https://github.com/Joorgem)")
 
-btn = st.button("Acesse os dados no Kaggle")
-if btn:
-    webbrowser.open_new_tab("https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
+st.link_button(
+    "Acesse os dados no Kaggle", 
+    "https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data"
+)
 
 st.markdown(
     """
